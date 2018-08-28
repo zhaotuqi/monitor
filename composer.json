@@ -3,7 +3,7 @@
     "description": "PHP上报Falcon的SDK",
     "type": "library",
     "require": {
-        "php": ">=7.1"
+        "php": ">=7.0"
     },
     "license": "MIT",
     "authors": [
@@ -11,5 +11,10 @@
             "name": "Min He",
             "email": "min.he@wenba100.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Monitor\\": "src/Monitor/"
+        }
+    }
 }

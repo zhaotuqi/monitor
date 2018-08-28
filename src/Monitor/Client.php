@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Libraries;
+namespace Monitor;
 
-class Monitor {
+class Client {
 
     // http://php.net/manual/en/transports.unix.php
     const MONITOR_SERVER_UDS = "udg:///var/tmp/monitor.sock";
