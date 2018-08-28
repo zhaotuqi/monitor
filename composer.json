@@ -1,0 +1,15 @@
+{
+    "name": "library/monitor",
+    "description": "PHP上报Falcon的SDK",
+    "type": "library",
+    "require": {
+        "php": ">=7.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Min He",
+            "email": "min.he@wenba100.com"
+        }
+    ]
+}
