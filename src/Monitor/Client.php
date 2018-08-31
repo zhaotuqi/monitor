@@ -46,7 +46,7 @@ class Client {
 
     private static function getHandle() {
         $sock = @stream_socket_client(self::MONITOR_SERVER_UDS, $errno, $errstr, 0,
-            STREAM_CLIENT_CONNECT|STREAM_CLIENT_ASYNC_CONNECT|STREAM_CLIENT_PERSISTENT);
+            STREAM_CLIENT_CONNECT|STREAM_CLIENT_ASYNC_CONNECT);
 
         if (false === $sock) {
             self::$error = "stream_socket_client failed, errno=$errno, error=$errstr";
