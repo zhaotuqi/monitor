@@ -25,6 +25,23 @@ class Client {
         return self::write($hd, $req);
     }
 
+    // 打点指定值，monitor-server会把打的值直接上报
+    public static function set($_key, $_value) {
+        $value = intval($_value);
+        if (0 == strlen($_key)) {
+            self::$error = "key不能为空";
+            return false;
+        }
+
+        $hd = self::getHandle();
+        if (false === $hd) {
+            return false;
+        }
+
+        $req = self::getSetReq($_key, $value);
+        return self::write($hd, $req);
+    }
+
     // 打点耗时，monitor-server会统计p99等
     public static function cost($_key, $_value) {
         $value = intval($_value);
@@ -77,6 +94,15 @@ class Client {
     private static function getIncReq($_key, $_value) {
         $req = array(
             "type" => "inc",
+            "key" => $_key,
+            "value" => $_value,
+        );
+        return json_encode($req, JSON_UNESCAPED_UNICODE);
+    }
+
+    private static function getSetReq($_key, $_value) {
+        $req = array(
+            "type" => "set",
             "key" => $_key,
             "value" => $_value,
         );
