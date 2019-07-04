@@ -1,5 +1,5 @@
 {
-    "name": "library/monitor",
+    "name": "library/monitor-test",
     "description": "PHP上报Falcon的SDK",
     "type": "library",
     "require": {
