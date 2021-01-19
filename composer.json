@@ -1,5 +1,5 @@
 {
-    "name": "library/monitor",
+    "name": "zhaotuqi/monitor",
     "description": "PHP上报Falcon的SDK",
     "type": "library",
     "require": {
@@ -8,8 +8,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Min He",
-            "email": "min.he@wenba100.com"
+            "name": "zhaoli",
+            "email": "zhaoli@163.com"
         }
     ],
     "autoload": {
